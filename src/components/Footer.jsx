@@ -6,9 +6,9 @@ function Footer() {
       
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0">
+          <div className="mb-4 md:mb-0 text-center md:text-left">
             <h3 className="text-xl sm:text-2xl font-bold mb-2">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+              <span className="text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                 Varun Sharma
               </span>
             </h3>
