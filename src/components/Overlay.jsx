@@ -79,7 +79,7 @@ function Overlay() {
                                 fontFamily="Arial Black"
                                 style={{
                                     letterSpacing: '-0.05em',
-                                    fontWeight: '1000',
+                                    fontWeight: '1000 sm:900',
                                     strokeWidth: '2px',
                                     stroke: 'black'
                                 }}
