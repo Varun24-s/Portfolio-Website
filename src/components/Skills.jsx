@@ -87,46 +87,42 @@ function Skills() {
         </div>
 
         {/* Mobile Slider View */}
-        <div className="md:hidden w-full">
-          <div
-            ref={containerRef}
-            className="flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar"
-          >
-            {skillCategories.map((category, index) => (
-              <div
-                key={index}
-                className="bg-white/5 rounded-lg p-4 min-w-[280px] w-[80vw] backdrop-blur-sm flex-shrink-0 snap-center"
-              >
-                <h3 className="text-xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-                  {category.title}
-                </h3>
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex} className="space-y-2">
-                      <div className="flex items-center gap-2">
-                        <motion.span 
-                          className="text-xl"
-                          whileHover={{ scale: 1.2 }}
-                        >
-                          {skill.icon}
-                        </motion.span>
-                        <span className="text-gray-300">{skill.name}</span>
+        <div className="md:hidden">
+          <div className="overflow-x-auto pb-4" style={{ WebkitOverflowScrolling: 'touch' }}>
+            <div className="flex gap-4 w-fit">
+              {skillCategories.map((category, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 rounded-lg p-4 min-w-[280px] w-[80vw] backdrop-blur-sm"
+                >
+                  <h3 className="text-xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
+                    {category.title}
+                  </h3>
+                  <div className="space-y-4">
+                    {category.skills.map((skill, skillIndex) => (
+                      <div key={skillIndex} className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <span className="text-xl">
+                            {skill.icon}
+                          </span>
+                          <span className="text-gray-300">{skill.name}</span>
+                        </div>
+                        <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+                          <motion.div
+                            initial={{ width: 0 }}
+                            whileInView={{ width: `${skill.level}%` }}
+                            transition={{ duration: 1, delay: skillIndex * 0.1 }}
+                            className="h-full bg-gradient-to-r from-purple-400 to-pink-600"
+                          />
+                        </div>
                       </div>
-                      <div className="h-2 bg-white/10 rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1, delay: skillIndex * 0.1 }}
-                          className="h-full bg-gradient-to-r from-purple-400 to-pink-600"
-                        />
-                      </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-          <p className="text-center text-gray-400 text-sm mt-4">← Scroll to see more →</p>
+          <p className="text-center text-gray-400 text-sm mt-4">Scroll horizontally to see more →</p>
         </div>
 
         <style jsx>{`

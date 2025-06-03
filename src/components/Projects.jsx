@@ -105,21 +105,20 @@ function Projects() {
         </div>
 
         {/* Mobile Slider View */}
-        <div className="sm:hidden w-full">
-          <div
-            ref={containerRef}
-            className="flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar"
-          >
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="min-w-[280px] w-[80vw] flex-shrink-0 snap-center"
-              >
-                <ProjectCard {...project} />
-              </div>
-            ))}
+        <div className="sm:hidden">
+          <div className="overflow-x-auto pb-4" style={{ WebkitOverflowScrolling: 'touch' }}>
+            <div className="flex gap-4 w-fit">
+              {projects.map((project, index) => (
+                <div
+                  key={index}
+                  className="min-w-[280px] w-[80vw]"
+                >
+                  <ProjectCard {...project} />
+                </div>
+              ))}
+            </div>
           </div>
-          <p className="text-center text-gray-400 text-sm mt-4">← Scroll to see more →</p>
+          <p className="text-center text-gray-400 text-sm mt-4">Scroll horizontally to see more →</p>
         </div>
 
         <style jsx>{`
