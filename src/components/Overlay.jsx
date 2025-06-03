@@ -78,7 +78,7 @@ function Overlay() {
                                 dominantBaseline="central"
                                 fontFamily="Arial Black"
                                 style={{
-                                    letterSpacing: '-0.05em',
+                                    letterSpacing: '0.01em',
                                     fontWeight: 1000,
                                     strokeWidth: '3px',
                                     stroke: 'black',
