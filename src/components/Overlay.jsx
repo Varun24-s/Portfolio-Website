@@ -72,13 +72,16 @@ function Overlay() {
                                 x="400"
                                 y="300"
                                 fontSize="150"
-                                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
+                                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black"
                                 textAnchor="middle"
                                 fill="black"
                                 dominantBaseline="central"
                                 fontFamily="Arial Black"
                                 style={{
-                                    letterSpacing: '-0.05em'
+                                    letterSpacing: '-0.05em',
+                                    fontWeight: 900,
+                                    strokeWidth: '2px',
+                                    stroke: 'black'
                                 }}
                             >
                                 &lt;Hello/&gt;
