@@ -111,19 +111,20 @@ function Projects() {
             className="flex gap-6 cursor-grab active:cursor-grabbing overflow-x-scroll scrollbar-hide pb-4"
             drag="x"
             dragConstraints={{ left: -(projects.length * 300), right: 0 }}
-            style={{ x }}
+            dragElastic={0.1}
+            dragMomentum={false}
+            style={{ touchAction: "pan-x" }}
           >
             {projects.map((project, index) => (
               <motion.div
                 key={index}
                 className="min-w-[300px] w-[85vw] max-w-[360px] flex-shrink-0"
-                style={{ x: transform }}
               >
                 <ProjectCard {...project} />
               </motion.div>
             ))}
           </motion.div>
-          <p className="text-center text-gray-400 text-sm mt-4">Swipe to see more →</p>
+          <p className="text-center text-gray-400 text-sm mt-4">← Swipe to see more →</p>
         </div>
       </div>
       <motion.div 

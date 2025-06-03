@@ -93,13 +93,14 @@ function Skills() {
             className="flex gap-6 cursor-grab active:cursor-grabbing overflow-x-scroll scrollbar-hide pb-4"
             drag="x"
             dragConstraints={{ left: -(skillCategories.length * 300), right: 0 }}
-            style={{ x }}
+            dragElastic={0.1}
+            dragMomentum={false}
+            style={{ touchAction: "pan-x" }}
           >
             {skillCategories.map((category, index) => (
               <motion.div
                 key={index}
                 className="bg-white/5 rounded-lg p-4 min-w-[300px] w-[85vw] max-w-[360px] backdrop-blur-sm flex-shrink-0"
-                style={{ x: transform }}
               >
                 <h3 className="text-xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                   {category.title}
@@ -130,7 +131,7 @@ function Skills() {
               </motion.div>
             ))}
           </motion.div>
-          <p className="text-center text-gray-400 text-sm mt-4">Swipe to see more →</p>
+          <p className="text-center text-gray-400 text-sm mt-4">← Swipe to see more →</p>
         </div>
       </div>
       <motion.div 
