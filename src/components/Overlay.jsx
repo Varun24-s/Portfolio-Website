@@ -72,17 +72,16 @@ function Overlay() {
                                 x="400"
                                 y="300"
                                 fontSize="150"
-                                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black"
+                                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
                                 textAnchor="middle"
                                 fill="black"
                                 dominantBaseline="central"
                                 fontFamily="Arial Black"
                                 style={{
                                     letterSpacing: '-0.05em',
-                                    fontWeight: 900,
-                                    strokeWidth: '3px',
-                                    stroke: 'black',
-                                    fill: 'white'
+                                    fontWeight: '1000',
+                                    strokeWidth: '2px',
+                                    stroke: 'black'
                                 }}
                             >
                                 &lt;Hello/&gt;
@@ -100,37 +99,7 @@ function Overlay() {
                 />
 
                 {/* Text outline */}
-                {/* <motion.g
-                    style={{
-                        scale,
-                        transformOrigin: "400px 300px",
-                    }}
-                    transition={{
-                        type: "spring",
-                        stiffness: 50,
-                        damping: 15,
-                        restDelta: 0.0001
-                    }}
-                >
-                    <text
-                        x="400"
-                        y="300"
-                        fontSize="150"
-                        className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl"
-                        textAnchor="middle"
-                        fill="none"
-                        stroke="white"
-                        strokeWidth="1"
-                        dominantBaseline="central"
-                        fontFamily="Arial Black"
-                        style={{
-                            letterSpacing: '-0.05em'
-                        }}
-                        filter="url(#textShadow)"
-                    >
-                        &lt;Hello!/&gt;
-                    </text>
-                </motion.g> */}
+                
             </svg>
         </motion.div>
     )
