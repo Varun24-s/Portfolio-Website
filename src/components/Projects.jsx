@@ -105,27 +105,32 @@ function Projects() {
         </div>
 
         {/* Mobile Slider View */}
-        <div className="sm:hidden w-full overflow-x-hidden">
-          <motion.div
+        <div className="sm:hidden w-full">
+          <div
             ref={containerRef}
-            className="flex gap-4 cursor-grab active:cursor-grabbing w-full"
-            drag="x"
-            dragConstraints={containerRef}
-            dragElastic={0.1}
-            dragMomentum={false}
-            style={{ touchAction: "pan-x" }}
+            className="flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar"
           >
             {projects.map((project, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="min-w-[280px] w-[80vw] flex-shrink-0"
+                className="min-w-[280px] w-[80vw] flex-shrink-0 snap-center"
               >
                 <ProjectCard {...project} />
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
-          <p className="text-center text-gray-400 text-sm mt-4">← Swipe to see more →</p>
+          </div>
+          <p className="text-center text-gray-400 text-sm mt-4">← Scroll to see more →</p>
         </div>
+
+        <style jsx>{`
+          .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+          .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
       </div>
       <motion.div 
         initial={{ opacity: 0, width: 0 }}

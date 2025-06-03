@@ -87,20 +87,15 @@ function Skills() {
         </div>
 
         {/* Mobile Slider View */}
-        <div className="md:hidden w-full overflow-x-hidden">
-          <motion.div
+        <div className="md:hidden w-full">
+          <div
             ref={containerRef}
-            className="flex gap-4 cursor-grab active:cursor-grabbing w-full"
-            drag="x"
-            dragConstraints={containerRef}
-            dragElastic={0.1}
-            dragMomentum={false}
-            style={{ touchAction: "pan-x" }}
+            className="flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar"
           >
             {skillCategories.map((category, index) => (
-              <motion.div
+              <div
                 key={index}
-                className="bg-white/5 rounded-lg p-4 min-w-[280px] w-[80vw] backdrop-blur-sm flex-shrink-0"
+                className="bg-white/5 rounded-lg p-4 min-w-[280px] w-[80vw] backdrop-blur-sm flex-shrink-0 snap-center"
               >
                 <h3 className="text-xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                   {category.title}
@@ -128,11 +123,21 @@ function Skills() {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
-          <p className="text-center text-gray-400 text-sm mt-4">← Swipe to see more →</p>
+          </div>
+          <p className="text-center text-gray-400 text-sm mt-4">← Scroll to see more →</p>
         </div>
+
+        <style jsx>{`
+          .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+          .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
       </div>
       <motion.div 
         initial={{ opacity: 0, width: 0 }}
