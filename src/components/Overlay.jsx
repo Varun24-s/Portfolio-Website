@@ -79,9 +79,10 @@ function Overlay() {
                                 fontFamily="Arial Black"
                                 style={{
                                     letterSpacing: '-0.05em',
-                                    fontWeight: 900,
-                                    strokeWidth: '2px',
-                                    stroke: 'black'
+                                    fontWeight: 1000,
+                                    strokeWidth: '3px',
+                                    stroke: 'black',
+                                    fill: 'white'
                                 }}
                             >
                                 &lt;Hello/&gt;
