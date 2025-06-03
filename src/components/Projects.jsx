@@ -105,12 +105,12 @@ function Projects() {
         </div>
 
         {/* Mobile Slider View */}
-        <div className="sm:hidden overflow-hidden mb-4">
+        <div className="sm:hidden w-full overflow-x-hidden">
           <motion.div
             ref={containerRef}
-            className="flex gap-6 cursor-grab active:cursor-grabbing overflow-x-scroll scrollbar-hide pb-4"
+            className="flex gap-4 cursor-grab active:cursor-grabbing w-full"
             drag="x"
-            dragConstraints={{ left: -(projects.length * 300), right: 0 }}
+            dragConstraints={containerRef}
             dragElastic={0.1}
             dragMomentum={false}
             style={{ touchAction: "pan-x" }}
@@ -118,7 +118,7 @@ function Projects() {
             {projects.map((project, index) => (
               <motion.div
                 key={index}
-                className="min-w-[300px] w-[85vw] max-w-[360px] flex-shrink-0"
+                className="min-w-[280px] w-[80vw] flex-shrink-0"
               >
                 <ProjectCard {...project} />
               </motion.div>

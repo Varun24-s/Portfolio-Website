@@ -87,12 +87,12 @@ function Skills() {
         </div>
 
         {/* Mobile Slider View */}
-        <div className="md:hidden overflow-hidden mb-12">
+        <div className="md:hidden w-full overflow-x-hidden">
           <motion.div
             ref={containerRef}
-            className="flex gap-6 cursor-grab active:cursor-grabbing overflow-x-scroll scrollbar-hide pb-4"
+            className="flex gap-4 cursor-grab active:cursor-grabbing w-full"
             drag="x"
-            dragConstraints={{ left: -(skillCategories.length * 300), right: 0 }}
+            dragConstraints={containerRef}
             dragElastic={0.1}
             dragMomentum={false}
             style={{ touchAction: "pan-x" }}
@@ -100,7 +100,7 @@ function Skills() {
             {skillCategories.map((category, index) => (
               <motion.div
                 key={index}
-                className="bg-white/5 rounded-lg p-4 min-w-[300px] w-[85vw] max-w-[360px] backdrop-blur-sm flex-shrink-0"
+                className="bg-white/5 rounded-lg p-4 min-w-[280px] w-[80vw] backdrop-blur-sm flex-shrink-0"
               >
                 <h3 className="text-xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                   {category.title}
