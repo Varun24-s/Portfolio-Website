@@ -22,11 +22,12 @@ function Hero({ scrollProgress, isNormalView }) {
     }, [scrollProgress, isNormalView]);
 
     return (
-        <section id="home" className="min-h-screen w-full bg-[#0b0314] py-8 sm:py-16 mt-16 sm:mt-20">
+        <section id="home" className="min-h-screen w-full bg-[#0b0314] py-8 sm:py-16 sm:mt-20">
             <div className="container mx-auto px-4 h-full flex items-center">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-1 items-center w-full">
                     {/* Left side - Text content */}
                     <div className="space-y-4 sm:space-y-6 sm:mt-20 ml-4 sm:ml-12 order-2 md:order-1">
+                        
                         <a href="https://en.wikipedia.org/wiki/Bhopal" target="_blank" 
                            className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-800 text-base sm:text-lg">BHOPAL, MADHYA PRADESH</a>
                         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
