@@ -175,7 +175,7 @@ function Navbar({ scrollProgress }) {
                                     transition={{ delay: 0.2 }}
                                     onClick={() => setIsMenuOpen(false)}
                                 >
-                                    Skilla
+                                    Skills
                                 </motion.a>
                                 <motion.a
                                     href="#education"
