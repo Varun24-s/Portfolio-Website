@@ -168,6 +168,16 @@ function Navbar({ scrollProgress }) {
                                     About
                                 </motion.a>
                                 <motion.a
+                                    href="#skills"
+                                    className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-2xl sm:text-3xl font-medium text-right hover:opacity-80 transition-opacity"
+                                    initial={{ opacity: 0, x: 50 }}
+                                    animate={{ opacity: isMenuOpen ? 1 : 0, x: isMenuOpen ? 0 : 50 }}
+                                    transition={{ delay: 0.2 }}
+                                    onClick={() => setIsMenuOpen(false)}
+                                >
+                                    Skilla
+                                </motion.a>
+                                <motion.a
                                     href="#education"
                                     className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-2xl sm:text-3xl font-medium text-right hover:opacity-80 transition-opacity"
                                     initial={{ opacity: 0, x: 50 }}
