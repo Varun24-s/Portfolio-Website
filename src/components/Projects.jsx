@@ -10,7 +10,7 @@ const ProjectCard = ({ title, description, tech, github, demo, image }) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="bg-[#1a0b2e] rounded-xl p-4 sm:p-6 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-purple-900/20 h-full flex flex-col"
+      className="bg-white/5 backdrop-blur-sm rounded-xl p-4 sm:p-6 hover:shadow-xl transition-all duration-300 hover:scale-[1.02] border border-purple-900/20 h-full flex flex-col"
     >
       <div className="relative overflow-hidden rounded-lg mb-3 sm:mb-4 h-48 sm:h-52 md:h-56">
         <a href={demo} target="_blank" rel="noopener noreferrer">
