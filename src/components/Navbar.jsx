@@ -32,12 +32,12 @@ function Navbar({ scrollProgress }) {
         <>
             <nav className="fixed top-0 left-0 w-full bg-transparent backdrop-blur-sm z-120">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex items-center justify-between h-16">
+                    <div className="flex items-center justify-between h-16 sm:h-20">
                         {/* Logo */}
                         <div className="mt-2 items-center">
                             <a href="#home">
                                 <span className="text-white text-2xl sm:text-3xl font-semibold">
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-4xl sm:text-5xl">V</span>
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-700 text-4xl sm:text-5xl">V</span>
                                     <motion.span
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0, x: 0 }}
@@ -46,7 +46,7 @@ function Navbar({ scrollProgress }) {
                                     >ARUN</motion.span>
                                 </span>
                                 <span className="text-white text-2xl sm:text-3xl font-semibold ml-2 sm:ml-5">
-                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-4xl sm:text-5xl">S</span>
+                                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-700 text-4xl sm:text-5xl">S</span>
                                     <motion.span
                                         initial={{ opacity: 0, y: 10 }}
                                         animate={{ opacity: 1, y: 0 }}

@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+.spline-viewer {
+  position: fixed;
+  scale: 1.5;
+  top: -15%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1000;
+}
+
+@media (max-width: 768px) {
+  .spline-viewer {
+    scale: 0.8;
+    left: -20%;
+    width: 150%;
+  }
+}

@@ -5,7 +5,7 @@ function About() {
   return (
     <>
       {/* Mobile version - no animations */}
-      <section className="sm:hidden bg-[#0b0314] text-white -mt-65 py-4 relative z-[100]">
+      <section className="sm:hidden bg-transparent text-white mt-75 py-4 relative z-[100]">
         <div className="container mx-auto px-4 mb-10">
           <h2 className="text-3xl font-bold mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
@@ -64,7 +64,7 @@ function About() {
       </section>
 
       {/* Desktop version - with animations */}
-      <section className="hidden sm:block bg-[#0b0314] text-white py-4 h-[70vh] md:-mt-0.5 relative z-0">
+      <section className="hidden sm:block bg-transparent text-white py-4 h-[70vh] md:-mt-0.5 relative z-0">
         <div className="container mx-auto px-4 mb-20">
           <h2 className="text-4xl font-bold mb-8">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
@@ -124,7 +124,7 @@ function About() {
           whileInView={{ opacity: 1, width: '100%' }}
           transition={{ duration: 0.5}}
           viewport={{ once: true }}
-          className="h-1 bg-gradient-to-r from-purple-400 to-pink-600 mt-30">   
+          className="h-1 bg-gradient-to-r from-purple-400 to-pink-600 mt-30 ">   
         </motion.div>
       </section>
     </>

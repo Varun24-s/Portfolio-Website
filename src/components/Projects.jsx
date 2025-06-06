@@ -83,7 +83,7 @@ function Projects() {
   const transform = useSpring(useTransform(scrollXProgress, [0, 1], [0, -100]), springConfig);
 
   return (
-    <section id="projects" className="bg-[#0b0314] text-white py-8 sm:h-[80vh] relative z-0">
+    <section id="projects" className="bg-transparent text-white py-8 sm:h-[80vh] relative z-0">
       <div className="container mx-auto px-4 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}

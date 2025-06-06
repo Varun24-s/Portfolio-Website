@@ -22,33 +22,32 @@ function Hero({ scrollProgress, isNormalView }) {
     }, [scrollProgress, isNormalView]);
 
     return (
-        <section id="home" className="min-h-screen w-full bg-[#0b0314] py-8 sm:py-16 sm:mt-20">
-            <div className="container mx-auto px-4 h-full flex items-center">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-1 items-center w-full">
+        <section id="home" className="h-screen w-full bg-transparent">
+            <div className="h-full container mx-auto px-4 flex items-center">
+                <div className="h-full grid grid-cols-1 md:grid-cols-2 gap-1 items-center w-full">
                     {/* Left side - Text content */}
-                    <div className="space-y-4 sm:space-y-6 sm:mt-20 ml-4 sm:ml-12 order-2 md:order-1">
-                        
+                    <div className="space-y-4 sm:space-y-6 ml-4 order-1 mt-25">
                         <a href="https://en.wikipedia.org/wiki/Bhopal" target="_blank" 
                            className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-800 text-base sm:text-lg">BHOPAL, MADHYA PRADESH</a>
-                        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
+                        <h1 className="text-6xl sm:text-5xl mt-3 md:mt-0 md:text-6xl font-bold">
                             <span className="text-white">Hi, I'm </span>
-                            <span className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 ${showName ? 'opacity-100' : 'opacity-0'
-                                } transition-opacity duration-500 text-4xl sm:text-5xl md:text-7xl tracking-wider`}>
+                            <span className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-purple-600 ${showName ? 'opacity-100' : 'opacity-0'
+                                } transition-opacity duration-500 text-6xl sm:text-5xl md:text-7xl tracking-wider`}>
                                 V
                             </span>
-                            <span className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 ${showName ? 'opacity-100' : 'opacity-0'
+                            <span className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-purple-700 ${showName ? 'opacity-100' : 'opacity-0'
                                 } transition-opacity duration-500 delay-100 -ml-2.5`}>
                                 a
                             </span>
-                            <span className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 ${showName ? 'opacity-100' : 'opacity-0'
+                            <span className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-700 to-purple-800 ${showName ? 'opacity-100' : 'opacity-0'
                                 } transition-opacity duration-500 delay-200`}>
                                 r
                             </span>
-                            <span className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 ${showName ? 'opacity-100' : 'opacity-0'
+                            <span className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-800 to-purple-900 ${showName ? 'opacity-100' : 'opacity-0'
                                 } transition-opacity duration-500 delay-300`}>
                                 u
                             </span>
-                            <span className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-800 ${showName ? 'opacity-100' : 'opacity-0'
+                            <span className={`text-transparent bg-clip-text bg-gradient-to-r from-purple-900 to-purple-950 ${showName ? 'opacity-100' : 'opacity-0'
                                 } transition-opacity duration-500 delay-400`}>
                                 n
                             </span>
@@ -73,8 +72,8 @@ function Hero({ scrollProgress, isNormalView }) {
                     </div>
 
                     {/* Right side - Image */}
-                    <div className="flex justify-center md:justify-end md:mr-15 order-1 md:order-2 mb-8 md:mb-0 mt-12 md:mt-0">
-                        <div className="relative w-48 h-48 hover:scale-105 transition-all duration-300 md:w-100 md:h-100">
+                    <div className="flex justify-center sm:justify-end md:justify-end md:mr-15 order-2 md:mb-0 mt-12 md:mt-0">
+                        <div className="relative w-75 h-75 hover:scale-105 transition-all duration-300 md:w-100 md:h-100">
                             <div className="absolute inset-0 bg-gradient-to-r transition-all duration-300 from-purple-400 to-pink-600 rounded-2xl blur-xl opacity-30 -z-10"></div>
                             <div className={`rounded-2xl w-full h-full shadow-3xl ring-4 ring-purple-500/20 ${showName ? 'rotate-0' : '-rotate-20 opacity-0'} duration-500`}>
                                 <img
@@ -92,7 +91,7 @@ function Hero({ scrollProgress, isNormalView }) {
                 whileInView={{ opacity: 1, width: '100%' }}
                 transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className="h-1 bg-gradient-to-r from-purple-400 to-pink-600 mt-20 sm:mt-25">
+                className="h-1 bg-gradient-to-r from-purple-400 to-pink-600 mt-10 sm:mt-15">
             </motion.div>
         </section>
     )

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 function Education() {
   return (
-    <section id="education" className="bg-[#0b0314] md:mt-35 text-white py-5 relative z-0">
+    <section id="education" className="bg-transparent md:mt-35 text-white py-5 relative z-0">
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-5xl font-bold mb-12 text-center">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">

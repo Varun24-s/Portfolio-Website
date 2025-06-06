@@ -46,7 +46,7 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="bg-[#0b0314] text-white py-10 relative z-0">
+    <section id="contact" className="bg-transparent text-white py-10 relative z-0">
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl sm:text-5xl font-bold mb-8 sm:mb-12 text-center">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">

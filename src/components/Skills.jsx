@@ -38,7 +38,7 @@ function Skills() {
   const transform = useSpring(useTransform(scrollXProgress, [0, 1], [0, -100]), springConfig);
 
   return (
-    <section id="skills" className="bg-[#0b0314] text-white md:mt-55 py-8 sm:h-[80vh] relative z-0">
+    <section id="skills" className="bg-transparent text-white md:mt-55 py-8 sm:h-[80vh] relative z-0">
       <div className="container mx-auto px-4 relative z-10">
         <h2 className="text-4xl font-bold mb-8 text-center">
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
