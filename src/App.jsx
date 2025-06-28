@@ -10,7 +10,7 @@ import Skills from "./components/Skills.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import ScrollProgressBar from "./components/ScrollProgressBar.jsx";
-import Squares from '/Users/varun/Desktop/Portfolio/src/components/Squares/Squares.jsx';
+import Squares from './components/Squares/Squares.jsx';
 
 
 
