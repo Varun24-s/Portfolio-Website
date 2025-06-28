@@ -4,9 +4,9 @@ function Footer() {
   return (
     <footer className="bg-transparent text-white w-full py-6 sm:py-8">
       
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 ">
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="mb-4 md:mb-0 text-center md:text-left">
+          <div className="mb-4 md:mb-0 text-center md:text-left z-9">
             <h3 className="text-xl sm:text-2xl font-bold mb-2">
               <span className="text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
                 Varun Sharma
@@ -15,7 +15,7 @@ function Footer() {
             <p className="text-sm sm:text-base text-gray-400">Web Developer | Problem Solver</p>
           </div>
           
-          <div className="flex space-x-4 sm:space-x-6">
+          <div className="flex space-x-4 sm:space-x-6 z-9">
             <a href="https://github.com/Varun24-s" target="_blank" rel="noopener noreferrer"
                className="hover:text-purple-400 transition-colors duration-300">
               <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="currentColor" viewBox="0 0 24 24">

@@ -10,6 +10,9 @@ import Skills from "./components/Skills.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import ScrollProgressBar from "./components/ScrollProgressBar.jsx";
+import Squares from '/Users/varun/Desktop/Portfolio/src/components/Squares/Squares.jsx';
+
+
 
 function App() {
   const { scrollYProgress } = useScroll();
@@ -38,7 +41,7 @@ function App() {
       // Reset scroll position and briefly prevent scrolling during transition
       window.scrollTo(0, 0);
       document.body.style.overflow = 'hidden';
-      
+
       // Re-enable scrolling after transition
       const timer = setTimeout(() => {
         document.body.style.overflow = 'visible';
@@ -77,8 +80,16 @@ function App() {
       >
         <ScrollProgressBar />
         <Navbar scrollProgress={scrollYProgress} />
-        <main className="overflow-x-hidden">
-          <motion.section 
+        <main className="overflow-x-hidden relative">
+          <Squares
+            speed={0.5}
+            squareSize={100}
+            direction='diagonal' // up, down, left, right, diagonal
+            borderColor='#fff'
+            hoverFillColor='#8A01E5'
+            className="z-1"
+          />
+          <motion.section
             className="min-h-screen"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -86,7 +97,7 @@ function App() {
           >
             <Home scrollProgress={scrollYProgress} isNormalView={true} />
           </motion.section>
-          
+
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -104,7 +115,7 @@ function App() {
           >
             <Skills />
           </motion.div>
-          
+
           <Projects />
           <Education />
           <Contact />
